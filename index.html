@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>📘 Modelos Atômicos + Quiz</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #121212;
+      color: #f1f1f1;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .secao {
+      display: none;
+      max-width: 800px;
+      margin: auto;
+      background: #1e1e1e;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #00ffaa88;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .secao.ativa {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn-nav, .btn-quiz {
+      background: #66ffcc;
+      color: #000;
+      padding: 10px 18px;
+      margin: 15px 5px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn-nav:hover, .btn-quiz:hover {
+      background: #33ffaa;
+    }
+
+    .quiz-container {
+      display: none;
+      max-width: 800px;
+      margin: auto;
+      background: #1e1e1e;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #00ffaa88;
+    }
+
+    .quiz-container.ativa {
+      display: block;
+    }
+
+    .pergunta {
+      margin-bottom: 25px;
+    }
+
+    .pergunta h3 {
+      margin-bottom: 10px;
+    }
+
+    .opcao {
+      display: block;
+      background: #2a2a2a;
+      color: #fff;
+      padding: 10px;
+      margin: 6px 0;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .opcao:hover {
+      background: #444;
+    }
+
+    .opcao.correta {
+      background-color: #00cc66 !important;
+    }
+
+    .opcao.errada {
+      background-color: #cc0033 !important;
+    }
+
+    .resultado-final {
+      font-size: 20px;
+      margin-top: 30px;
+    }
+
+    .creditos {
+      font-size: 11px;
+      color: #777;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Modelos Atômicos</h1>
+      <p style="text-align: center;">Explore a evolução da estrutura da matéria e depois teste seus conhecimentos!</p>
+
+  <div id="secoes">
+    <div class="secao ativa" id="pag1">
+      <h2>Filósofos da Antiguidade</h2>
+      <style>
+      p {
+        text-align: justify;
+      }
+      </style>
+      <p>Demócrito, filósofo grego do século V a.C., propôs a ideia do átomo ao tentar responder uma pergunta fundamental: até onde a matéria pode ser dividida? Ele acreditava que, se continuássemos dividindo qualquer substância em partes menores, chegaríamos a um ponto em que a partícula seria indivisível. A essa unidade ele deu o nome de átomo, palavra que vem do grego a-tomos, que significa “não cortável”. Para Demócrito, tudo no universo era formado por esses átomos eternos, invisíveis, indivisíveis, imutáveis e em constante movimento. Eles diferiam apenas em forma, tamanho e movimento, e ao se juntarem de maneiras diferentes, formavam todas as coisas do mundo. Não havia espaço para o acaso, os átomos se moviam mecanicamente no vazio, o espaço onde eles podiam se deslocar. Enquanto isso, outro pensador importante, Empédocles, apresentou uma explicação diferente para a composição da matéria. Ele rejeitava a ideia de partículas indivisíveis e propôs que toda a realidade era formada por quatro elementos fundamentais: terra, água, ar e fogo. Segundo ele, tudo o que existe seria uma combinação dessas quatro substâncias, misturadas em proporções variadas. Além disso, Empédocles introduziu duas forças para explicar a mudança e a mistura desses elementos: amor, que unia, e ódio, que separava. Mais tarde, Aristóteles retomou e desenvolveu a teoria dos quatro elementos de Empédocles. Ele também acreditava que toda a matéria era composta por terra, água, ar e fogo, mas rejeitava totalmente a ideia de Demócrito sobre os átomos. Para Aristóteles, a matéria era contínua e podia ser dividida infinitamente, nunca chegando a uma partícula indivisível. Cada elemento possuía qualidades específicas, como quente, frio, seco e úmido, e a transformação da matéria acontecia por meio da mudança dessas qualidades. A teoria de Aristóteles foi tão influente que predominou no pensamento ocidental por quase dois mil anos, deixando as ideias de Demócrito esquecidas até que a ciência moderna as redescobrisse e as colocasse no centro da física e da química.</p>
+    </div>
+
+    <div class="secao" id="pag2">
+      <h2>John Dalton</h2>
+      <p>O modelo atômico de John Dalton, proposto em 1808, foi o primeiro modelo científico moderno do átomo. Dalton, ao estudar as reações químicas e as leis das proporções, concluiu que toda a matéria era formada por partículas muito pequenas e indivisíveis, que ele chamou de átomos. Segundo ele, os átomos eram esferas maciças, homogêneas, indestrutíveis e indivisíveis, semelhantes a pequenas bolas de bilhar. Cada elemento químico seria formado por um único tipo de átomo, todos com a mesma massa e propriedades. Já os compostos seriam formados pela combinação de átomos de elementos diferentes em proporções fixas. Dalton também afirmava que, durante as reações químicas, os átomos apenas se reorganizavam, sem serem criados nem destruídos. Esse modelo foi essencial para estabelecer a base da teoria atômica moderna, mesmo que, mais tarde, tenha sido superado por modelos mais avançados que revelaram a estrutura interna do átomo.</p>
+    </div>
+
+    <div class="secao" id="pag3">
+      <h2>J.J. Thomson</h2>
+      <p>O modelo atômico de Joseph John Thomson foi proposto em 1898, após a descoberta do elétron, e representou uma grande revolução no entendimento da estrutura da matéria. Diferente de Dalton, que acreditava que o átomo era indivisível, Thomson demonstrou experimentalmente que o átomo possuía partes menores, ou seja, era divisível. Utilizando um tubo de raios catódicos, ele observou que havia partículas com carga negativa sendo emitidas do interior do átomo. Essas partículas, mais tarde chamadas de elétrons, apresentavam sempre a mesma relação carga/massa, independentemente do material usado no experimento, o que indicava que todos os átomos continham essas mesmas partículas. Diante dessa descoberta, Thomson propôs um novo modelo para o átomo, que ficou conhecido como modelo do pudim de passas (ou modelo da bola de passas, dependendo da tradução). Nesse modelo, o átomo seria uma esfera maciça, porém com carga positiva distribuída uniformemente em todo o seu volume, como se fosse uma “massa” positiva. Incrustados dentro dessa esfera estariam os elétrons, de carga negativa, espalhados como passas em um bolo, de forma a neutralizar a carga total do átomo, mantendo-o eletricamente neutro. Esse modelo foi importante por dois motivos principais. Primeiro, porque introduziu a ideia de estrutura interna no átomo, contrariando a noção de indivisibilidade proposta por Dalton. Segundo, porque foi o primeiro a incluir partículas com carga elétrica e a sugerir que elas estavam dispostas dentro de uma matriz contínua. Thomson acreditava que os elétrons podiam vibrar ou se mover dentro dessa massa positiva, o que poderia explicar certos fenômenos da radiação. Embora esse modelo tenha sido posteriormente refutado por Ernest Rutherford em 1911, ele foi essencial para abrir o caminho para a física atômica moderna. A descoberta do elétron e a proposta de que o átomo tinha partes internas mudaram completamente a forma como os cientistas compreendiam a matéria, e marcaram o início da era dos modelos atômicos experimentais, baseados em evidências concretas e testes laboratoriais.<p>
+    </div>
+
+    <div class="secao" id="pag4">
+      <h2>Ernest Rutherford</h2>
+      <p>O modelo atômico de Rutherford, proposto em 1911 por Ernest Rutherford, representou uma mudança significativa na compreensão da estrutura da matéria, superando o modelo de Thomson que sugeria que os elétrons estavam distribuídos em uma esfera de carga positiva. A nova proposta surgiu a partir de um experimento clássico conduzido por Rutherford, Hans Geiger e Ernest Marsden, no qual uma fina lâmina de ouro foi bombardeada com partículas alfa. Esperava-se que essas partículas atravessassem a lâmina com pequenas deflexões, se o modelo de Thomson estivesse correto. No entanto, os resultados surpreenderam os cientistas: a maioria das partículas passou direto, algumas desviaram em ângulos consideráveis e poucas retornaram quase na direção de onde vieram. Essas observações levaram Rutherford a concluir que o átomo é composto por um núcleo central muito pequeno, denso e positivo, que concentra praticamente toda a massa do átomo, enquanto os elétrons orbitam esse núcleo em torno de um grande espaço vazio. A comparação famosa feita por Rutherford foi a de que o átomo é como um sistema solar em miniatura, no qual os elétrons giram ao redor do núcleo assim como os planetas orbitam o Sol. O núcleo, por ser positivo, repele as partículas alfa também positivas, explicando os desvios observados no experimento. Esse modelo, conhecido como modelo nuclear do átomo, foi revolucionário porque introduziu a ideia de um núcleo central e descartou a concepção de que a massa estava uniformemente distribuída. Apesar de inovador, o modelo de Rutherford tinha limitações, principalmente por não explicar a estabilidade dos elétrons em órbita – segundo as leis do eletromagnetismo clássico, partículas carregadas em movimento circular deveriam emitir energia continuamente e, portanto, cair no núcleo. Essa limitação seria mais tarde abordada e corrigida por Niels Bohr, que introduziu conceitos da mecânica quântica. Ainda assim, o modelo de Rutherford foi essencial para consolidar a noção do núcleo atômico e orientar os rumos da física moderna.</p>
+    </div>
+
+    <div class="secao" id="pag5">
+      <h2>Niels Bohr</h2>
+      <p>O modelo atômico de Niels Bohr, proposto em 1913, representou um avanço importante na compreensão da estrutura dos átomos, especialmente ao resolver problemas deixados pelo modelo anterior de Rutherford. A principal dificuldade do modelo de Rutherford era explicar por que os elétrons, ao girarem ao redor do núcleo, não perdiam energia e colapsavam sobre ele. Segundo as leis da física clássica, isso deveria acontecer, mas os átomos são estáveis na natureza, e então, Bohr se propôs a explicar por quê. Bohr sugeriu que os elétrons não podiam ocupar qualquer órbita ao redor do núcleo, mas apenas certas órbitas bem definidas, chamadas de níveis de energia. Nessas órbitas específicas, os elétrons poderiam se mover livremente sem perder energia, contrariando o que se esperava da física clássica. Ele também explicou que os elétrons podem mudar de órbita, ou seja, saltar de um nível de energia para outro, mas apenas se absorverem ou liberarem uma quantidade exata de energia nesse processo. Essa teoria ajudou a explicar fenômenos observados na prática, como as linhas coloridas no espectro da luz emitida por certos gases, especialmente o hidrogênio. Cada vez que um elétron salta de uma órbita mais distante para uma mais próxima do núcleo, ele libera energia em forma de luz, e essa luz tem uma cor característica. Com isso, o modelo de Bohr conseguiu justificar por que diferentes elementos emitem luzes com cores diferentes quando são aquecidos ou energizados. Embora o modelo de Bohr tenha funcionado muito bem para explicar o átomo de hidrogênio, ele não foi capaz de prever com precisão o comportamento de átomos mais complexos, com mais de um elétron. Ainda assim, foi um passo fundamental para o desenvolvimento da mecânica quântica, que viria a descrever os átomos de forma ainda mais precisa. O modelo de Bohr marcou a transição entre uma visão clássica e uma visão quântica da matéria, ao introduzir a ideia revolucionária de que os elétrons só podem ocupar determinados estados de energia.</p>
+    </div>
+
+    <div class="secao" id="pag6">
+      <h2>Modelo Quântico</h2>
+      <p>O modelo atômico quântico, também chamado de modelo mecânico quântico, é atualmente o mais aceito para explicar a estrutura dos átomos. Esse modelo surgiu para superar as limitações do modelo de Bohr, que tratava os elétrons como partículas que se movem em órbitas circulares definidas ao redor do núcleo. Com o avanço da mecânica quântica no início do século XX, foi possível compreender que o comportamento dos elétrons é mais complexo e não pode ser explicado por trajetórias fixas. Os elétrons apresentam uma natureza dual, comportando-se tanto como partículas quanto como ondas. Essa ideia de dualidade foi inicialmente proposta por Louis de Broglie, que sugeriu que os elétrons, apesar de serem partículas, também possuem características ondulatórias. Com base nesse conceito, o físico Erwin Schrödinger formulou uma equação que descreve o comportamento ondulatório dos elétrons nos átomos. Essa equação não determina a posição exata do elétron, mas sim a probabilidade de encontrá-lo em determinadas regiões ao redor do núcleo, chamadas de orbitais. Cada orbital possui uma forma e energia específicas, e os elétrons tendem a ocupar os orbitais de menor energia disponível. Enquanto Schrödinger ofereceu uma descrição mais precisa da distribuição dos elétrons, Werner Heisenberg introduziu o princípio da incerteza, que afirma ser impossível determinar simultaneamente com precisão absoluta a posição e a velocidade de uma partícula como o elétron. Esse princípio reforça a ideia de que, no nível atômico, o comportamento das partículas deve ser descrito de forma probabilística, substituindo a noção clássica de trajetórias definidas por uma nuvem eletrônica que indica onde o elétron provavelmente se encontra. Outra contribuição fundamental para o modelo atômico foi a descoberta do nêutron por James Chadwick, em 1932. Antes dessa descoberta, o núcleo atômico era compreendido como formado apenas por prótons, o que não explicava completamente a massa dos átomos nem sua estabilidade. Chadwick identificou o nêutron, uma partícula sem carga elétrica, porém com massa semelhante à do próton, que compõe junto com os prótons o núcleo atômico. A presença dos nêutrons ajuda a manter o núcleo estável, reduzindo a repulsão entre as cargas positivas dos prótons. Essas contribuições permitiram consolidar o modelo atômico moderno, que entende o átomo como constituído por um núcleo central denso formado por prótons e nêutrons, e por elétrons distribuídos em orbitais ao redor desse núcleo. Esse modelo não só explica com maior precisão os fenômenos observados experimentalmente, como também serve de base para a química, a física e as tecnologias desenvolvidas atualmente. A construção desse conhecimento é fruto do esforço contínuo da ciência para desvendar a estrutura fundamental da matéria.</p>
+      <button class="btn-quiz" onclick="iniciarQuiz()">🎯 Iniciar Quiz</button>
+    </div>
+  </div>
+
+  <div>
+    <button class="btn-nav" onclick="navegar(-1)">◀ Anterior</button>
+        <button class="btn-nav" onclick="navegar(1)">Próxima ▶</button>
+  </div>
+
+  <!-- QUIZ INTERATIVO -->
+  <div class="quiz-container" id="quiz">
+    <h2>Detetive Químico: Modelos Atômicos</h2>
+    <div id="quiz-content"></div>
+    <div class="resultado-final" id="resultado"></div>
+    <button class="btn-quiz" onclick="reiniciarQuiz()">🔁 Recomeçar</button>
+  </div>
+
+  <div class="creditos">Programador: Gabriel F. M. Cardoso</div>
+
+  <script>
+    let paginaAtual = 1;
+    const totalPaginas = 6;
+
+    function mostrarSecao(n) {
+      document.querySelectorAll('.secao').forEach(s => s.classList.remove('ativa'));
+      document.getElementById("pag" + n).classList.add('ativa');
+    }
+
+    function navegar(dir) {
+      paginaAtual += dir;
+      if (paginaAtual < 1) paginaAtual = 1;
+      if (paginaAtual > totalPaginas) paginaAtual = totalPaginas;
+      mostrarSecao(paginaAtual);
+    }
+
+    function iniciarQuiz() {
+      document.getElementById("secoes").style.display = "none";
+      document.querySelectorAll(".btn-nav").forEach(btn => btn.style.display = "none");
+      document.getElementById("quiz").classList.add("ativa");
+      carregarPerguntas();
+    }
+
+    const perguntas = [
+      {
+        texto: "1. Qual foi a principal conclusão do experimento de Rutherford com partículas alfa e lâmina de ouro?",
+        opcoes: ["A carga positiva está distribuida uniformemente em todo o átomo", "O átomo possui um núcleo pequeno, denso e positivo, concentrando quase toda sua massa", "Os elétrons estão imersos dentro de um pudim de cargas positivas espalhadas pelo átomo."],
+        correta: 1
+      },
+      {
+        texto: "2. No modelo atômico de Rutherford, o que explica o fato de a maior parte das partículas alfa atravessarem a lâmina sem grande desvio?",
+        opcoes: ["O núcleo é muito pequeno em relação ao tamanho total do átomo, deixando grandes espaços vazios", "As partículas alfa não interagem com as cargas positivas", "Os elétrons desviam as partículas alfa para fora do caminho"],
+        correta: 0
+      },
+      {
+        texto: "3. Qual era a principal limitação do modelo de Rutherford que motivou o desenvolvimento do modelo de Bohr?",
+        opcoes: ["Incapacidade de explicar a existência do núcleo.", "Impossibilidade de justificar a estabilidade dos elétrons em órbita.", "Falta de previsão sobre a existência dos elétrons."],
+        correta: 1
+      },
+      {
+        texto: "4. No modelo de Bohr, como os elétrons conseguem permanecer em órbitas ao redor do núcleo sem perder energia?",
+        opcoes: ["Eles emitem energia constantemente para manter a órbita.","Eles ocupam apenas órbitas específicas, quantizadas, nas quais não perdem energia.", "A força do núcleo mantém os elétrons presos mesmo com perda de energia."],
+        correta: 1
+      },
+      {
+        texto: "5. A emissão de luz com frequências específicas nos átomos, como no hidrogênio, é explicada por Bohr por quê",
+        opcoes: ["Os elétrons colidem com o núcleo e emitem luz.", "Os elétrons saltam entre níveis de energia diferentes, emitindo ou absorvendo energia em forma de fótons.", "Os prótons emitem radiação ao se moverem no núcleo."],
+        correta: 1
+      },
+      {
+        texto: "6. Louis de Broglie foi fundamental para o modelo quântico porque propôs que:",
+        opcoes: ["Os elétrons se comportam exclusivamente como partículas.", "Os elétrons têm natureza dual, podendo agir como partículas e ondas.", "Os elétrons são imãs que giram ao redor do núcleo."],
+        correta: 1
+      },
+      {
+        texto: "7. O modelo quântico atual é baseado em:",
+        opcoes: ["Regiões de probabilidade", "Órbitas fixas", "Núcleos instáveis"],
+        correta: 0
+      },
+      {
+        texto: "8. O que significa dizer que os elétrons ocupam “orbitais” no modelo quântico?",
+        opcoes: ["Os elétrons percorrem trajetórias fixas ao redor do núcleo.", "Os elétrons estão localizados em regiões onde há maior probabilidade de encontrá-los, descritas por funções de onda.", "Os elétrons estão presos em órbitas elípticas como os planetas."],
+        correta: 1
+      },
+      {
+        texto: "9. O princípio da incerteza de Heisenberg implica que:",
+        opcoes: [" É possível medir com precisão a posição e velocidade dos elétrons simultaneamente.", "A posição e a velocidade dos elétrons não podem ser determinadas exatamente ao mesmo tempo.", "Os elétrons não têm massa definida."],
+        correta: 1
+      },
+      {
+        texto: "10. A descoberta do nêutron por James Chadwick foi importante porque:",
+        opcoes: ["Confirmou que o núcleo contém apenas prótons.", "Explicou a massa extra do núcleo e a estabilidade dos átomos ao apresentar uma partícula sem carga elétrica.", "Mostrou que os elétrons também estão no núcleo."],
+        correta: 1
+      },
+      {
+        texto: "11. Qual foi o problema do modelo de Bohr para átomos com mais de um elétron?",
+        opcoes: ["O modelo não conseguia explicar as órbitas circulares.", "O modelo não conseguia prever os espectros de emissão de átomos mais complexos.", "O modelo não aceitava a existência de nêutrons."],
+        correta: 1
+      },
+      {
+        texto: "12. No modelo quântico, o que a “função de onda” de um elétron representa?",
+        opcoes: ["A órbita exata em que o elétron se move.", "A densidade de probabilidade de encontrar o elétron em uma determinada região do espaço.", "A energia que o elétron perde ao se mover."],
+        correta: 1
+      },
+      {
+        texto: "13. Por que o modelo quântico abandonou a ideia de órbitas fixas para os elétrons?",
+        opcoes: ["Porque não havia órbitas fixas observadas experimentalmente.", "Porque o comportamento dos elétrons é melhor descrito por probabilidades de localização, não trajetórias definidas.", "Porque os elétrons estão presos no núcleo."],
+        correta: 1
+      },
+  
+    ];
+
+    let pontuacao = 0;
+
+    function carregarPerguntas() {
+      const container = document.getElementById("quiz-content");
+      container.innerHTML = "";
+      pontuacao = 0;
+
+      perguntas.forEach((pergunta, index) => {
+        const div = document.createElement("div");
+        div.classList.add("pergunta");
+
+        const titulo = document.createElement("h3");
+        titulo.innerText = pergunta.texto;
+        div.appendChild(titulo);
+
+        pergunta.opcoes.forEach((opcao, i) => {
+          const btn = document.createElement("div");
+          btn.classList.add("opcao");
+          btn.innerText = opcao;
+          btn.onclick = () => verificarResposta(btn, i, pergunta.correta, index);
+          div.appendChild(btn);
+        });
+
+        container.appendChild(div);
+      });
+    }
+
+    function verificarResposta(elemento, indiceEscolhido, indiceCorreto, perguntaIndex) {
+      const perguntaDiv = elemento.parentElement;
+      const opcoes = perguntaDiv.querySelectorAll(".opcao");
+
+      opcoes.forEach((op, i) => {
+        op.onclick = null; // desativa clique
+        if (i === indiceCorreto) op.classList.add("correta");
+        if (i === indiceEscolhido && i !== indiceCorreto) op.classList.add("errada");
+      });
+
+      if (indiceEscolhido === indiceCorreto) pontuacao++;
+
+      if (perguntaIndex === perguntas.length - 1) {
+        setTimeout(() => {
+          document.getElementById("resultado").innerText = `Você acertou ${pontuacao} de ${perguntas.length} perguntas!`;
+        }, 600);
+      }
+    }
+
+    function reiniciarQuiz() {
+      document.getElementById("resultado").innerText = "";
+      carregarPerguntas();
+    }
+  </script>
+
+</body>
+</html>
